@@ -1,4 +1,4 @@
-package br.com.treinar.aula03;
+package br.com.treinar.aula03.adicionais;
 
 public class BreakLabel {
 	public static void main(String[] args) {

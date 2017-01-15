@@ -1,4 +1,4 @@
-package br.com.treinar.aula03;
+package br.com.treinar.aula03.adicionais;
 
 import javax.swing.JOptionPane;
 
