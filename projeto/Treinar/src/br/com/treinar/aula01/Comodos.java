@@ -6,5 +6,5 @@ public class Comodos {
 	byte quarto;
 	byte cozinha;
 	byte sala;
-	boolean escritorio;
+	byte escritorio;
 }
