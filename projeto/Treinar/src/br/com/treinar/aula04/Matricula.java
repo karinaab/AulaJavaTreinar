@@ -3,44 +3,36 @@ package br.com.treinar.aula04;
 import java.util.Scanner;
 
 public class Matricula {
-	String disciplina;
-	int numDisciplina;
-	String nome;
-	int idade;
-
+	public Aluno aluno;
+	
+	public Matricula(){
+		aluno = new Aluno();
+	}
+	
 	public void inserirDados() {
 		Scanner leitor = new Scanner(System.in);
-		System.out.print("\tNome do aluno: ");
-		nome = leitor.nextLine();
-		System.out.print("Idade do aluno: ");
-		idade = leitor.nextInt();
+		System.out.print("Nome: ");
+		aluno.setNome(leitor.nextLine());
+		System.out.print("Idade: ");
+		aluno.setIdade(leitor.nextInt());
 		leitor.nextLine();
-		
-		/*if (idade < 15) {
-			
-			System.exit(0);
-		}*/
 
-		System.out.print("Disciplina disponiveis: ");
-		System.out.println("ingles (I) e espanhol (E).");
-
-		System.out.print("\tDisciplina desejada (I ou E): ");
-		disciplina = leitor.nextLine();
+		System.out.print("Série: ");
+		aluno.setSerie(leitor.nextInt());
+		leitor.nextLine();
+		System.out.print("Em qual turma gostaria de participar (A, B, C ou D)? ");
+		aluno.setTurma(leitor.nextLine());
 		leitor.close();
 		System.out.println("\n");
 	}
-
-	public String alocarAluno(int idade){
-		String nivel;
-		if (idade >= 25) {
-			nivel = "III";
-			return nivel;
-		} else if (idade >= 20) {
-			nivel = "II";
-			return nivel;
-		}else if (idade >= 15){
-			nivel = "I";
-			return nivel;
-		}else return "N";
+	
+	public void mostrarDados(Aluno aluno){
+		System.out.println("Nome:\t" + aluno.getNome());
+		System.out.println("Idade:\t" + aluno.getIdade());
+		System.out.println("Série:\t" + aluno.getSerie());
+		System.out.println("Turma:\t" + aluno.getTurma());
+		System.out.println("\n");
 	}
+	
+	
 }

@@ -1,23 +1,21 @@
 package br.com.treinar.aula04;
 
+import java.util.Scanner;
+
 public class Escola {
-	public static void main(String[] args) {
-		String nivel;
-		Matricula matricula = new Matricula();
+	Integer opcao;
+	
+	public Integer menuEscola() {
+		Scanner leitor = new Scanner(System.in);
 		
-		System.out.println("Vamos comecar a matricula!");
-		matricula.inserirDados();
-		nivel = matricula.alocarAluno(matricula.idade);
+		System.out.println("1 - Matricula"
+						 + "2 - Rematricula aluno"
+						 + "3 - Acessar dados do aluno"
+						 + "4 - Acessar notas"
+						 + "5 - Fim da pesquisa");
 		
-		
-		
-		if (!nivel.equals("N")){
-			System.out.println(matricula.nome + " foi matriculado na disciplina " + matricula.disciplina + " " + nivel);
-		}else{
-			System.out.println(matricula.nome + " não foi matriculado na disciplina " + matricula.disciplina);
-			System.out.println("Aluno está na faixa etária.");
-		}
-		
-		
+		opcao = leitor.nextInt();
+		leitor.close();
+		return opcao;
 	}
 }
