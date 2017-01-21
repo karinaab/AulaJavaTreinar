@@ -5,6 +5,7 @@ public class LoopControl {
 		int x = 10;
 		
 		//WHILE
+		System.out.println("\nWHILE: ");
 		while (x < 14) {
 			System.out.println("Numero igual a " + x);
 			//x++;
@@ -17,13 +18,24 @@ public class LoopControl {
 		
 		//DO WHILE
 		do {
-			System.out.println("Dentro do DO WHILE - " + x);
+			System.out.print("\nDentro do DO WHILE - " + x);
 			x++;
 		}while (x < 13);
 		
 		//FOR
+		System.out.println("\n\nFOR: ");
 		for(int a = 1; a <= 5; a++){
-			System.out.println(a + "\tKarina");
+			System.out.println(a);
+		}
+		
+		//FOREACH
+		System.out.print("\nFOREACH: ");
+		int[] array = new int[4];
+		x = 10;
+		
+		for (int valor : array) {
+			valor = x++;
+			System.out.print("\nValor: " + valor);
 		}
 		
 	}

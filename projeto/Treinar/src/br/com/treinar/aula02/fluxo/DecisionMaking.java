@@ -25,7 +25,7 @@ public class DecisionMaking {
 		} else if (opcao == 5) {
 			System.out.println("cinco");
 		} else {
-			System.out.println("Número não encontrado.");
+			System.out.println("NÃºmero nÃ£o encontrado.");
 		}
 		
 		//SWITCH
@@ -47,7 +47,7 @@ public class DecisionMaking {
 			break;
 
 		default:
-			System.out.println("- Número não encontrado.");
+			System.out.println("- NÃºmero nÃ£o encontrado.");
 			break;
 		}
 	}
