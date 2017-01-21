@@ -1,36 +1,26 @@
-package exercicio23_01;
+package projetoFloricultura;
 
-public class Pessoa {
+public class Cliente {
 	private String nome;
 	private Integer idade;
-	private String tamCabelo;
-		
-
+	
 	public String getNome() {
 		return nome;
 	}
-
+	
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
+	
 	public Integer getIdade() {
 		return idade;
 	}
-
+	
 	public void setIdade(Integer idade) {
 		this.idade = idade;
 	}
-
-	public String getTamCabelo() {
-		return tamCabelo;
-	}
-
-	public void setTamCabelo(String tamCabelo) {
-		this.tamCabelo = tamCabelo;
-	}
 	
-	//As pessoas são consideradas iguais se a idade e o nome forem iguais.
+	//Os clientes serão considerados iguais se tiverem o mesmo nome e a mesma idade.
 	
 	@Override
 	public int hashCode() {
@@ -49,7 +39,7 @@ public class Pessoa {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Pessoa other = (Pessoa) obj;
+		Cliente other = (Cliente) obj;
 		if (idade == null) {
 			if (other.idade != null)
 				return false;
@@ -62,6 +52,8 @@ public class Pessoa {
 			return false;
 		return true;
 	}
-
+	
+	
+	
 
 }

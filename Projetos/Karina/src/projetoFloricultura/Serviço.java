@@ -1,22 +1,26 @@
-package exercicio23_01;
+package projetoFloricultura;
 
 public class Serviço {
+	Cliente[] clientes;
 	
-	void inserirDados(Pessoa p1, Pessoa p2, Pessoa p3){
-		p1.setNome("Joana");
-		p1.setIdade(32);
-		p1.setTamCabelo("Medio");
-		
-		p2.setNome("Joana");
-		p2.setIdade(32);
-		p2.setTamCabelo("Curto");
-		
-		p3.setNome("Marcelo");
-		p3.setIdade(26);
-		p3.setTamCabelo("Curto");
+	
+	public Serviço() {
+		clientes = new Cliente[3];
 	}
 	
-	void inserirDados(Imóvel i1, Imóvel i2, Imóvel i3){
+	void inserirDadosCliente(){
+		clientes[0].setNome("Joana");
+		clientes[0].setIdade(23);
+	}
+
+	public void exibirCliente() {
+		System.out.print("Clientes: ");
+		System.out.println("\t" + clientes[0].getNome());
+		
+		
+	}
+	
+	/*void inserirDados(Imóvel i1, Imóvel i2, Imóvel i3){
 		i1.setBairro("Buritis");
 		i1.setNumero(572);
 		i1.setTipo("Casa");
@@ -43,5 +47,6 @@ public class Serviço {
 		c3.setModelo("Siena");
 		c3.setPlaca("HPQ 9381");
 	}
+	*/
 
 }
