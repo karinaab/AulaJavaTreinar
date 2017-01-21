@@ -1,7 +1,7 @@
-package br.com.treinar.aula04;
+package projetoEscola;
 
 public class Main {
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		public Escola escola;
 		Integer opcao;
 		
@@ -18,9 +18,9 @@ public class Main {
 	}
 
 	public Main() {
-		escola = new Escola();	
+		escola = new Escola();	*/
 		
 	}
 
 
-}
+

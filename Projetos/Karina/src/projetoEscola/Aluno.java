@@ -1,4 +1,4 @@
-package br.com.treinar.aula04;
+package projetoEscola;
 
 public class Aluno {
 	private String nome;

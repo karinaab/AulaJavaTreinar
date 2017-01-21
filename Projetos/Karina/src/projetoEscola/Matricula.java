@@ -1,4 +1,4 @@
-package br.com.treinar.aula04;
+package projetoEscola;
 
 import java.util.Scanner;
 
