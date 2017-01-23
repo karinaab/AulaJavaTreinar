@@ -3,7 +3,7 @@ package projetoFloricultura;
 public class Vaso {
 	private String tamanho;
 	private String cor;
-	private String ocasiao;
+	private String ambiente;
 	
 	public String getTamanho() {
 		return tamanho;
@@ -21,21 +21,21 @@ public class Vaso {
 		this.cor = cor;
 	}
 	
-	public String getOcasiao() {
-		return ocasiao;
+	public String getAmbiente() {
+		return ambiente;
 	}
 	
-	public void setOcasiao(String ocasiao) {
-		this.ocasiao = ocasiao;
+	public void setAmbiente(String ocasiao) {
+		this.ambiente = ocasiao;
 	}
 	
-	//Os vasos serão considerados iguais se forem para a mesma ocasiao.
+	//Os vasos serão considerados iguais se forem para o mesmo ambiente.
 	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((ocasiao == null) ? 0 : ocasiao.hashCode());
+		result = prime * result + ((ambiente == null) ? 0 : ambiente.hashCode());
 		return result;
 	}
 
@@ -48,10 +48,10 @@ public class Vaso {
 		if (getClass() != obj.getClass())
 			return false;
 		Vaso other = (Vaso) obj;
-		if (ocasiao == null) {
-			if (other.ocasiao != null)
+		if (ambiente == null) {
+			if (other.ambiente != null)
 				return false;
-		} else if (!ocasiao.equals(other.ocasiao))
+		} else if (!ambiente.equals(other.ambiente))
 			return false;
 		return true;
 	}
