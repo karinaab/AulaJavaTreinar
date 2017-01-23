@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class Exercicio {
+public class ExercicioListaNomes {
 	public static void main(String[] args) {
 		Map<Character, List<String>> nomes = new HashMap<Character, List<String>>();
 		List<String> lista = new ArrayList<String>();
