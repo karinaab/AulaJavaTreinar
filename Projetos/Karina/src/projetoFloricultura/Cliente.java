@@ -1,9 +1,12 @@
 package projetoFloricultura;
 
+import java.util.List;
+
 public class Cliente {
 	private String nome;
 	private String sobrenome;
 	private Integer idade;
+	private List<Vaso> vasos;
 
 	public String getNome() {
 		return nome;
@@ -31,6 +34,14 @@ public class Cliente {
 	
 	//Os clientes serão considerados iguais se tiverem o mesmo nome e a mesma idade.
 	
+	public List<Vaso> getVasos() {
+		return vasos;
+	}
+
+	public void setVasos(List<Vaso> vasos) {
+		this.vasos = vasos;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;

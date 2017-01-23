@@ -6,18 +6,15 @@ import java.util.List;
 public class Serviço {
 	List<Cliente> clientes;
 	List<Flor> flores;
-	List<Vaso> vasos;
 
 	public Serviço() {
 		clientes = new ArrayList<>();
 		flores = new ArrayList<>();
-		vasos = new ArrayList<>();
 	}
 
 	public void inserirDados() {
 		inserirDadosCliente();
 		inserirDadosFlor();
-		inserirDadosVaso();
 	}
 
 	public void comparacaoEquals() {
@@ -40,22 +37,26 @@ public class Serviço {
 
 	public void inserirDadosCliente() {
 		Cliente c1 = new Cliente();
+		c1.setVasos(new ArrayList<>());
 		c1.setNome("Joana");
 		c1.setSobrenome("Silva");
 		c1.setIdade(23);
+		cadastrarVaso(c1,"pequeno", "branco", "residência");
 		clientes.add(c1);
 
 		Cliente c2 = new Cliente();
 		c2.setNome("Joana");
 		c2.setSobrenome("Martins");
 		c2.setIdade(23);
+		cadastrarVaso(c2);
 		clientes.add(c2);
 
 		Cliente c3 = new Cliente();
 		c3.setNome("Lucas");
 		c3.setSobrenome("Martins");
 		c3.setIdade(23);
-		clientes.add(c2);
+		cadastrarVaso(c3);
+		clientes.add(c3);
 	}
 	
 	public void comparacaoEqualsCliente() {
@@ -127,41 +128,22 @@ public class Serviço {
 
 	}
 
-	public void inserirDadosVaso() {
-
-		Vaso v1 = new Vaso();
-		v1.setTamanho("Médio");
-		v1.setCor("Transparente");
-		v1.setAmbiente("Festa");
-		vasos.add(v1);
-
-		Vaso v2 = new Vaso();
-		v2.setTamanho("Pequeno");
-		v2.setCor("Branco");
-		v2.setAmbiente("Festa");
-		vasos.add(v2);
-
+	private void cadastrarVaso(Cliente cliente, String tamanho, String cor, String ambiente) {
 		Vaso v3 = new Vaso();
-		v3.setTamanho("Pequeno");
-		v3.setCor("Branco");
-		v3.setAmbiente("Residência");
-		vasos.add(v3);
-
+		v3.setTamanho(tamanho);
+		v3.setCor(cor);
+		v3.setAmbiente(ambiente);
+		cliente.getVasos().add(v3);
 	}
 	
 	public void comparacaoEqualsVaso() {
 
-		if (vasos.get(0).equals(vasos.get(1))) {
-			System.out.println("Vaso 1 é igual ao vaso 2.");
-		}
-
-		if (vasos.get(0).equals(vasos.get(2))) {
-			System.out.println("Vaso 1 é igual ao vaso 3.");
-		}
-
-		if (vasos.get(1).equals(vasos.get(2))) {
-			System.out.println("Vaso 2 é igual ao vaso 3.");
-		}
+		Cliente cliente1 = clientes.get(0);
+		Cliente cliente2 = clientes.get(1);
+		Cliente cliente3 = clientes.get(2);
+		System.out.println(cliente1.getVasos().equals(cliente2.getVasos()) ? "Vaso do cliente 1 é igual ao vaso do cliente 2." : null);
+		System.out.println(cliente1.getVasos().equals(cliente3.getVasos()) ? "Vaso do cliente 1 é igual ao vaso do cliente 3." : null);
+		System.out.println(cliente2.getVasos().equals(cliente3.getVasos()) ? "Vaso do cliente 2 é igual ao vaso do cliente 3." : null);
 	}
 
 	public void exibirVasos() {
