@@ -48,14 +48,14 @@ public class Serviço {
 		c2.setNome("Joana");
 		c2.setSobrenome("Martins");
 		c2.setIdade(23);
-		cadastrarVaso(c2);
+		cadastrarVaso(c2, "pequeno", "transparente", "residência");
 		clientes.add(c2);
 
 		Cliente c3 = new Cliente();
 		c3.setNome("Lucas");
 		c3.setSobrenome("Martins");
 		c3.setIdade(23);
-		cadastrarVaso(c3);
+		cadastrarVaso(c3, "grande", "transparente", "festa");
 		clientes.add(c3);
 	}
 	
@@ -78,7 +78,8 @@ public class Serviço {
 		for (int i = 0; i < clientes.size(); i++) {
 			System.out.printf("Cliente %d: \n", i);
 			System.out.print("\t" + clientes.get(i).getNome() + " " + clientes.get(i).getSobrenome());
-			System.out.println(", " + clientes.get(i).getIdade() + " anos.");
+			System.out.print(", " + clientes.get(i).getIdade() + " anos, comprou o vaso ");
+			System.out.println(clientes.get(i).getVasos() + clientes.get(i).getIdade() + " anos, comprou o vaso ");
 		}
 
 	}
