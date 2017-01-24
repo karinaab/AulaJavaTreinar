@@ -32,7 +32,6 @@ public class Serviço {
 		System.out.println();
 		exibirFlores();
 		System.out.println();
-		exibirVasos();
 	}
 
 	public void inserirDadosCliente() {
@@ -79,7 +78,8 @@ public class Serviço {
 			System.out.printf("Cliente %d: \n", i);
 			System.out.print("\t" + clientes.get(i).getNome() + " " + clientes.get(i).getSobrenome());
 			System.out.print(", " + clientes.get(i).getIdade() + " anos, comprou o vaso ");
-			System.out.println(clientes.get(i).getVasos() + clientes.get(i).getIdade() + " anos, comprou o vaso ");
+			List<Vaso> vasos = clientes.get(i).getVasos();
+			System.out.println(vasos.get(i).getTamanho() + vasos.get(i).getCor() + " para ambiente de " + vasos.get(i).getAmbiente());
 		}
 
 	}
@@ -147,13 +147,5 @@ public class Serviço {
 		System.out.println(cliente2.getVasos().equals(cliente3.getVasos()) ? "Vaso do cliente 2 é igual ao vaso do cliente 3." : null);
 	}
 
-	public void exibirVasos() {
-
-		for (int i = 0; i < vasos.size(); i++) {
-			System.out.printf("Vaso %d: \n", i);
-			System.out.print("\tTamanho " + vasos.get(i).getTamanho() + " , cor " + vasos.get(i).getCor());
-			System.out.println(", ambiente de " + vasos.get(i).getAmbiente() + " .");
-		}
-	}
 
 }
